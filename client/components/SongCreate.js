@@ -16,6 +16,7 @@ class SongCreate extends Component {
     event.preventDefault()
 
     this.props.mutate({
+      //graphql query variables
       variables: { title: this.state.title },
       //refetches the list of songs to prevent caching
       refetchQueries: [{ query }]
