@@ -11,7 +11,11 @@ import SongList from './components/SongList';
 import SongDetail from './components/SongDetail';
 
 
-const client = new ApolloClient({});
+const client = new ApolloClient({
+  // takes all of the data ran through the backend and identifies
+  // each piece of data using the id field
+  dataIdFromObject: o => o.id
+});
 
 const Root = () => {
   return (
